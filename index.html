@@ -10,19 +10,21 @@
 <body>
     <script>
         //    1
-        function starpattern(rows) {
-            for (let i = 1; i <= rows; i++) {
-                let pattern = "";
-                for (let j = 1; j <= 1; j++) {
-                    pattern += "*";
-                }
-                console.log(pattern.trim());
+        var i, j, k;
+        for (i = 1; i <= 5; i++) {
+            for (k = 1; k <= (5 - i); k++) {
+                console.log("&nbsp");
             }
+            for (j = 1; j <= i; j++) {
+                console.log("*");
+            }
+            console.log("<br>");
         }
-        starpattern(5);
+
 
         // 2
-        const items = ['car', '5', 'js', 'node js', 'mysql', 'sql'];
+
+        const items = ['car', 5, 1, 'js', 'node js', 'mysql', 'sql'];
         items.map(item => {
             switch (typeof item) {
                 case 'string':
@@ -39,42 +41,30 @@
 
         // 3
 
-        function arraymodify() {
-            return function (arr) {
-                arr.splice(5, 1);
-                arr.splice(2, 1);
-                return arr;
+        // function arraymodify() {
+        //     return function (arr) {
+        //         arr.splice(5, 1);
+        //         arr.splice(2, 1);
+        //         return arr;
 
-            };
-        }
+        //     };
+        // }
 
-        const array1=arraymodify();
-        const original_array =[1,2,3,4,5,6];
-        const array2=array(original_array);
-        console.log(array2);
+        // const array1 = arraymodify();
+        // const original_array = [1, 2, 3, 4, 5, 6];
+        // const array2 = array(original_array);
+        // console.log(array2);
 
 
         // 4
-
-        class arr1{
-            constructor(arr){
-                this.array=arr;
-                this.logarray();
-            }
-            logarray(){
-                this.array.array.forEach(element => {
-                    console.log(element);
-                    
-                });
-            }
+        const array1 = new Array(1, 2, 3, 4, 5, 6);
+        for (const element of array1) {
+            console.log(element);
         }
-        const myarray=[1,2,3,4,5,6];
-        const logger=new arr1(myarray);
-
         // 5
 
-        (function(){
-            const name="jesna joseph";
+        (function () {
+            const name = "jesna joseph";
             console.log(name);
         })();
     </script>
