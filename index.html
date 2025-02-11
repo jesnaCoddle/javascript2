@@ -13,14 +13,13 @@
         var i, j, k;
         for (i = 1; i <= 5; i++) {
             for (k = 1; k <= (5 - i); k++) {
-                console.log("&nbsp");
+                document.write("&nbsp");
             }
             for (j = 1; j <= i; j++) {
-                console.log("*");
+                document.write("*");
             }
-            console.log("<br>");
+            document.write("<br>");
         }
-
 
         // 2
 
@@ -41,19 +40,19 @@
 
         // 3
 
-        // function arraymodify() {
-        //     return function (arr) {
-        //         arr.splice(5, 1);
-        //         arr.splice(2, 1);
-        //         return arr;
+        function outer() {
+            let array = [1, 2, 3, 4, 5, 6];
+            return function inner() {
+                array = array.filter((num, index) => index !== 2 && index !== 5);
+                console.log(array);
+            }
+        }
 
-        //     };
-        // }
+        let innerFunc = outer();
+        innerFunc(); 
 
-        // const array1 = arraymodify();
-        // const original_array = [1, 2, 3, 4, 5, 6];
-        // const array2 = array(original_array);
-        // console.log(array2);
+
+     
 
 
         // 4
